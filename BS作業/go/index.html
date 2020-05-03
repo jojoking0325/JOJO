@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        var map;
+        function initMap() {
+            var uluru = { lat: 24.757092, lng: 120.952242 };
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: new google.maps.LatLng(24.757092, 120.952242),
+                //   mapTypeId: 'terrain'
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+                animation: google.maps.Animation.BOUNCE,
+                icon:
+                {
+                    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5srnLGX9JIO_GonTPGoOjycig3bMwxcWwp17VSf1Dy8YUCkYn&usqp=CAU',
+                    scaledSize: new google.maps.Size(50, 50)
+                }
+                //    animation: google.maps.Animation.DROP
+            });
+
+            // Create a <script> tag and set the USGS URL as the source.
+            var script = document.createElement('script');
+            // This example uses a local copy of the GeoJSON stored at
+            // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+            script.src = "http://127.0.0.1:5500/MaskData.json";
+            // script.src ="http://127.0.0.1:5500/AllData.json";
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+
+        // Loop through the results array and place a marker for each
+        // set of coordinates.
+        window.eqfeed_callback = function (results) {
+            for (var i = 0; i < results.features.length; i++) {
+                var coords = results.features[i].geometry.coordinates;
+                var latLng = new google.maps.LatLng(coords[1], coords[0]);
+                var marker = new google.maps.Marker({
+                    position: latLng,
+                    map: map,
+                    animation: google.maps.Animation.BOUNCE,
+                    icon:
+                    {
+                        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5srnLGX9JIO_GonTPGoOjycig3bMwxcWwp17VSf1Dy8YUCkYn&usqp=CAU',
+                        scaledSize: new google.maps.Size(50, 50)
+                    }
+                });
+                
+            }
+            
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkbDMshPP3oEXNtXHo5pRcdoeO6fjl6U0&callback=initMap"
+        async defer></script>
+</body>
+
+</html>

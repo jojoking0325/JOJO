@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        var map;
+        // var marker;
+        fetch('https://findmasks.herokuapp.com/places')
+            .then((response) => response.json())
+            .then((data) => {
+                // Put your code here
+                // debugger;
+                for (var i = 0; i <= data.features.length; i++) {
+                    var n1 = data.features[i].geometry["coordinates"];
+                    var n2 = data.features[i].properties.masksLeft;
+                    var n3 = data.features[i].properties.childMasksLeft;
+                    // console.log(n1[0]);
+                    // console.log(n1[1]);
+                    var p = { lat: n1[1], lng: n1[0], n2, n3 };
+                    // console.log(p);
+
+                    if (n2 != 0 && n3 != 0) {
+                        marker = new google.maps.Marker({
+                            position: p,
+                            map: map,
+                            icon: {
+                                url: 'https://pic.pimg.tw/miao25/4a76c978863c3.png',
+                                scaledSize: new google.maps.Size(50, 50)
+                            }
+                        });
+                    }
+                    else {
+                        marker = new google.maps.Marker({
+                            position: p, map: map,
+                            icon: {
+                                url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ_subbyAdrpJmFhtobK8eIf_wOn8qe-mMq3NOQBukc0Wjl9ffy&usqp=CAU',
+                                scaledSize: new google.maps.Size(50, 50)
+                            }
+                        });
+                    }
+
+                }
+
+                // debugger;
+                //  var x = data.features[0].geometry["coordinates"]
+            })
+            .catch((error) => {
+                // Handle the error
+            });
+        function initMap() {
+            // The location of Uluru
+            var uluru = { lat: 24.757909, lng: 120.952317 };
+            // The map, centered at Uluru
+            /* var maskposition = fetch.data.features[0].geometry["coordinates"]; */
+            map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 15, center: uluru });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({
+                position: uluru, map: map,
+                icon: {
+                    url: 'https://pic.pimg.tw/miao25/4a76c978863c3.png',
+                    scaledSize: new google.maps.Size(50, 50)
+                }
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlKWP4uWjQIR3WDAWLAu6rUhBfc3_ppag&callback=initMap"
+        async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+ 
+  <body>
+
+  
+    
+     
+
+    <div id="map"></div>
+    <script>
+      var map;
+      var maker;
+        fetch('https://findmasks.herokuapp.com/places')
+        .then((response) => response.json())
+        .then((data) => {
+            // Put your code here
+            // debugger;
+            for (var i = 0; i <= data.features.length; i++) {
+                var n1 = data.features[i].geometry["coordinates"];
+                var n2 = data.features[i].properties.masksLeft;
+                var n3 = data.features[i].properties.childMasksLeft;
+               
+                var p = { lat: n1[1], lng: n1[0], n2, n3 };
+                // console.log(p);
+
+                if (n2 != 0 && n3 != 0) {
+                    marker = new google.maps.Marker({
+                        position: p,
+                        map: map,
+                        animation: google.maps.Animation.BOUNCE,
+                        // 
+
+                        icon: {
+                            url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5srnLGX9JIO_GonTPGoOjycig3bMwxcWwp17VSf1Dy8YUCkYn&usqp=CAU',
+                            scaledSize: new google.maps.Size(20, 20)
+                        }
+                    });
+                }
+                else {
+                    marker = new google.maps.Marker({
+                        position: p, map: map,
+                        icon: {
+                            url: 'https://cdn.pixabay.com/photo/2012/04/12/20/12/x-30465_960_720.png',
+                            scaledSize: new google.maps.Size(20, 20)
+                        }
+                    });
+                }
+            }
+            // debugger;
+            //  var x = data.features[0].geometry["coordinates"]
+        })
+        .catch((error) => {
+            // Handle the error
+        });
+      function initMap() 
+      {
+          var uluru = { lat: 24.757092, lng: 120.952242 };
+          map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: new google.maps.LatLng(24.757092, 120.952242),
+        //   mapTypeId: 'terrain'
+        });
+        var marker = new google.maps.Marker({
+              position: uluru,
+              map: map,
+              animation: google.maps.Animation.BOUNCE,
+              icon:
+              {
+                  url: 'https://image.flaticon.com/icons/svg/106/106180.svg',
+                  scaledSize: new google.maps.Size(30, 30)
+              }
+              //    animation: google.maps.Animation.DROP
+          });
+             
+        // Create a <script> tag and set the USGS URL as the source.
+        var script = document.createElement('script');
+        // This example uses a local copy of the GeoJSON stored at
+        // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+       script.src = "http://127.0.0.1:5500/MaskData.json";
+        document.getElementsByTagName('head')[0].appendChild(script);
+      }
+
+      // Loop through the results array and place a marker for each
+      // set of coordinates.
+      window.eqfeed_callback = function(results) 
+      {
+        for (var i = 0; i < results.features.length; i++) {
+          var coords = results.features[i].geometry.coordinates;
+          var latLng = new google.maps.LatLng(coords[1],coords[0]);
+        //    marker = new google.maps.Marker({
+        //     position: latLng,
+        //     map: map
+        //   });
+        }
+      }
+      function getCurrent() {
+
+            const _this = this;
+
+            // 先確認使用者裝置能不能抓地點
+            if (navigator.geolocation) {
+
+                // 使用者不提供權限，或是發生其它錯誤
+                function error() {
+                    alert('無法取得你的位置');
+                }
+
+                // 使用者允許抓目前位置，回傳經緯度
+                function success(position) {
+
+                    // 將所在地設成比較的點
+                    let originPosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+                    // 把要計算的點存成陣列
+                    let destinations = [];
+                    Array.prototype.forEach.call(_this.features, f => {
+                        destinations.push(new google.maps.LatLng(f.geometry.coordinates[0], f.geometry.coordinates[1]));
+                    });
+
+                    // 所在位置跟各點的距離
+                    const service = new google.maps.DistanceMatrixService();
+                    service.getDistanceMatrix({
+                        origins: [originPosition],
+                        destinations: destinations,
+                        travelMode: 'WALKING', // 交通方式：BICYCLING(自行車)、DRIVING(開車，預設)、TRANSIT(大眾運輸)、WALKING(走路)
+                        unitSystem: google.maps.UnitSystem.METRIC, // 單位 METRIC(公里，預設)、IMPERIAL(哩)
+                        avoidHighways: true, // 是否避開高速公路
+                        avoidTolls: true // 是否避開收費路線
+                    }, callback);
+                    function callback(response, status) {
+                        console.log(response);
+                        // 把距離寫進json裡
+                        for (let i = 0, len = _this.features.length; i < len; i++) {
+                            _this.features[i].properties.distance = response.rows[0].elements[i].distance.value;
+                            _this.features[i].properties.distance_text = response.rows[0].elements[i].distance.text;
+                            _this.features[i].properties.distance_time = response.rows[0].elements[i].duration.text;
+                        }
+                        // 按距離重排
+                        _this.features = _this.features.sort((a, b) => {
+                            return a.properties.distance > b.properties.distance ? 1 : -1;
+                        });
+                        console.log(_this.features);
+                    }
+                }
+
+                // 跟使用者拿所在位置的權限
+                navigator.geolocation.getCurrentPosition(success, error);
+
+            } else {
+                alert('Sorry, 你的裝置不支援地理位置功能。')
+            }
+        }      
+        function  mounted() {
+                window.addEventListener('load', () => {
+                    this.initMap();
+                });
+            }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkbDMshPP3oEXNtXHo5pRcdoeO6fjl6U0&callback=initMap" async
+        defer></script>
+
+       
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                    crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                    crossorigin="anonymous"></script>
+        
+        
+</html>

@@ -1,0 +1,138 @@
+
+    <footer id="colophon" class="site-footer footer-columns" role="contentinfo">
+    
+        <div class="container footer-section">
+            <div class="row">
+    
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div id="text-9" class="widget widget_text">
+                        <h4 style="color:#fff;">格言使命</h4>
+                        <div class="textwidget">
+                            <p style="line-height: 27px;">
+                                本會為了達到有效整合並妥善運用校內各項資源，除了管理學生事務外，更發揮其應有之功能及效益，特別分設：學生行政中心、學生議會。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clearfix visible-sm"></div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div id="text-11" class="widget widget_text">
+                        <h4 style="color:#fff;">服務時間</h4>
+                        <div class="textwidget">
+                            <p>星期一、二、四 10:00 ~ 18:00</p>
+                            <p>星期三 12:00 ~ 18:00</p>
+                            <p>星期五及國定假日公休</p>
+                            <p>寒暑假視情況調整</p>
+                            <br>
+                            <h4 style="color:#fff;">聯絡方式</h4>
+                            <p><strong>聯絡電話</strong></p>
+                            <p><a href="tel:(03)265-8000">(03)265-8000</a></p>
+                            <p><strong>電子郵件</strong></p>
+                            <p><a href="mailto:cycu.student.associations@gmail.com">
+                                chusa16th@gmail.com
+                            </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div id="text-12" class="widget widget_text">
+                        <h4 style="color:#fff;">辦公室地址</h4>
+                        <div class="textwidget">
+                            <address>
+                                <p style="letter-spacing:1px;">300新竹市香山區五福路二段707號<br></p>
+                            </address>
+                            <div class="Flexible-container">
+                                <!-- <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2086772551434!2d121.23897589525502!3d24.959013865660182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34682216067ab597%3A0xc19d847f277df84f!2zMzIw5qGD5ZyS5biC5Lit5aOi5Y2A5a2455Sf5rS75YuV5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1473401123748"
+                                    allowfullscreen>
+                                </iframe> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- .row -->
+            <span class="visible-xs text-center">
+                <iframe
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCYCUSA&tabs&width=340&height=154&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1661440110743603"
+                    width="340" height="154" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true"></iframe>
+            </span>
+        </div><!-- .container -->
+    
+        <div class="footerwrap">
+            <div class="container">
+                <div class="row hidden-xs hidden-sm">
+                    <div class="col-md-6 col-lg-6">
+                        <p class="text-muted" style="letter-spacing:2px;">
+                            <a href="https://sa.cycu.edu.tw/wp-login.php" style="color:#999;" target="_blank">&copy;</a>
+                            Copyright 2020 <a href="https://sa.cycu.edu.tw/" title="中華大學學生會 CHUSA" rel="home"
+                                target="_blank">中華大學學生會 CHUSA</a>
+                        </p>
+                        <p class="text-muted" style="letter-spacing:2px;">
+                            Based on <a href="https://wordpress.org" target="_blank">WordPress</a> &amp; <a
+                                href="http://getbootstrap.com" target="_blank">Bootstrap</a>. Web fonts from <a
+                                href="https://fonts.google.com" target="_blank">Google</a>.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <nav role="navigation" class="footermenu">
+                            <ul id="menu-%e5%ba%95%e9%83%a8%e9%80%a3%e7%b5%90" class="footer-menu">
+                                <li id="menu-item-1818" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1818">
+                                    <a target="_blank" rel="noopener noreferrer" href="http://www1.chu.edu.tw/">中華大學首頁</a>
+                                </li>
+                                <li id="menu-item-3625"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3625">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/chu.sa.com.tw/">C H U S A 粉專</a>
+                                </li>
+                                <li id="menu-item-1817"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1817">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/CHU1990/">中華大學粉專</a>
+                                </li>
+                                
+                                <li id="menu-item-189" class="menu-item menu-item-type-custom       menu-item-object-custom menu-item-1818">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://elearn.chu.edu.tw/">Ecampus&Moudle</a>
+                                </li>
+                              
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+    
+                <div class="row visible-xs visible-sm">
+                    <div class="col-xs-12 col-sm-12">
+                        <nav role="navigation" class="footermenu">
+                            <ul id="menu-%e5%ba%95%e9%83%a8%e9%80%a3%e7%b5%90-1" class="footer-menu">
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3625">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.cycu.edu.tw">中華大學粉專</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1817">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/chu.sa.com.tw/">學生會粉專</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1818">
+                                    <a target="_blank" rel="noopener noreferrer"
+                                        href="https://www.facebook.com/cycu.dreamcometrue/">學生會&#038;社團</a></li>
+                                <!-- <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1819">
+                                    <a target="_blank" rel="noopener noreferrer"
+                                        href="https://www.facebook.com/中原大學聯合特約-278661052323208/">聯合特約專頁</a></li> -->
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-xs-12 col-sm-12">
+                        <p class="text-muted" style="letter-spacing:2px;">
+                            <a href="https://sa.cycu.edu.tw/wp-login.php" style="color:#999;" target="_blank">&copy;</a>
+                            Copyright 2020 <a href="https://sa.cycu.edu.tw/" title="中華大學學生會 CHUSA" rel="home"
+                                target="_blank">中華大學學生會 CHUSA</a>
+                        </p>
+                        <p class="text-muted" style="letter-spacing:2px;">
+                            Based on <a href="https://wordpress.org" target="_blank">WordPress</a> &amp; <a
+                                href="http://getbootstrap.com" target="_blank">Bootstrap</a>. Web fonts from <a
+                                href="https://fonts.google.com" target="_blank">Google</a>.
+                        </p>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </footer><!-- #colophon -->
+    </div><!-- #page -->

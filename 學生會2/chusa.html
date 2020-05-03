@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            
+            display: flex;
+            align-items: center;
+            background-image:linear-gradient(90deg,#BBFFFF	,#FFFFCE		) ;
+            /* background-color: #000; */
+        }
+        .table{
+            border-radius: 10px 0 0 0 ;
+            width: 1400px;
+            margin: auto;
+        }
+        .table table{
+            
+            width: 100%;
+            border: 3px ridge #666;
+            /* border-style: dotted dashed solid double; */
+            border-radius: 10px;
+            background: #fff;
+        }
+        .table thead{
+            
+            /* background-image:linear-gradient(0deg,#FF0000	,#FF8000	) ; */
+            background-color: #ACD6FF	;
+            /* color:#FFDC35	; */
+            color: #000;
+        }
+        .table thead th:first-child{
+            border-radius: 7px 0 0 0;
+        }
+        .table thead th:last-child{
+            border-radius: 0 7px 0 0;
+        }      
+        .table tbody tr:nth-child(odd)
+        {
+            /* color: #fff; */
+            background-color: #CECEFF	;
+        }
+        
+        .table tbody td:hover{
+            background-image:linear-gradient(360deg,#FF2D2D	,#FFFFCE) ;
+            /* color: #fff; */
+        }
+        .table tbody a{
+            color: #E6CAFF;
+        }
+        .table tfoot td:first-child{
+            border-radius:  0 0  0 7px;
+        }
+        .table tfoot td:last-child{
+            border-radius: 0  0 7px 0 ;
+        }
+        .table th{
+            
+            /* border: 1px solid #666; */
+            border: 3px ridge #666;
+            padding: 6px 10px;
+        }
+        .table td{
+            border: 3px ridge #666;
+            /* border: 1px solid #666; */
+            padding: 6px 10px;
+        }
+        .table caption{
+            caption-side: bottom;
+            text-align: right;
+            padding: 10px 0;
+            color: #9393FF;
+        }
+        .table caption a{
+            color: #E6CAFF;
+        }
+        .table p{
+            
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+        .table button{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+        .table tp{
+            color: #000;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+        .table h1{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+        .table .tp p{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <!-- <div class="banner">
+
+    </div> -->
+    <div class="table">
+        <table>
+            <div class="tp">
+                    <h1>社團簡介</h1><br>
+                   <p>本校現有 84 個社團</p>
+                   <p>分成 7 大類</p>
+                   <p>學藝性社團－17 個</p>
+                   <p>體育性社團－11 個</p>
+                   <p>康樂性社團－13 個</p>
+                   <p>服務性社團－11 個</p>
+                   <p>聯誼性社團－4 個</p>
+                   <p>系學會－25 個</p>
+                   <p>學生自治團體－3 個</p>                    
+            </div>
+            <caption>
+                社團介紹
+            </caption>
+            <thead>
+                    <h1>各社團介紹</h1>
+                <tr>
+                    <th scope="col"><p>學藝性社團</p></th>
+                    <th scope="col"><p>體育性社團</p></th>
+                    <th scope="col"><p>康樂性社團</p></th>
+                    <th scope="col"><p>服務性社團</p></th>
+                    <th scope="col"><p>聯誼性社團</p></th>
+                    <th scope="col"><p>系學會</p></th>
+                    <th scope="col"><p>學生自治團體</p></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>風華攝影社</p>
+                        <!-- <button type="button" class="btn btn-outline-primary">查看</button> -->
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>桌球研習社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>中華吉他社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>春暉社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>金友會</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>電機系系學會</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>學生自治會</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>晨星社</p>
+                        <button type="button" class="btn btn-outline-primary w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>桌球研習社</p>
+                        <button type="button" class="btn btn-outline-primary w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>烹飪社</p>
+                        <button type="button" class="btn btn-outline-primary w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>崇德青年社</p>
+                        <button type="button" class="btn btn-outline-primary w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>南友會</p>
+                        <button type="button" class="btn btn-outline-primary w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>資工系系學會</p>
+                        <button type="button" class="btn btn-outline-primary w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>學生議會</p>
+                        <button type="button" class="btn btn-outline-primary w-100 d-block">查看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>鋼琴社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>中華大學跆拳道社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>頑音社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>交通安全服務社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>陸生聯誼社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>土木系系學會</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>中華書院自治會</p>             
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>信望愛團契社</p>           
+                        <button type="button" class="btn btn-outline-primary w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>羽球社</p>
+                        <button type="button" class="btn btn-outline-primary w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>動漫遊戲社</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>關懷生命社</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>馬來西亞同學會</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>工業管理學系系學會</p>
+                        <button type="button" class="btn btn-outline-primary w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>領袖研習社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    <td>
+                        <p>籃球裁判紀錄台組社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td>
+                        <p>管樂社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td><p>陽光大使團</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                    <td><p>機械工程學系系學會</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                    <td><p>演說辯論社</p>
+                    <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td><p>中華足球社</p>
+                    <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td><p>陽光自行車社</p>
+                    <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td><p>電腦維修社</p>
+                    <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                    <td><p>資訊管理系系學會</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><p>民族管弦樂社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td><p>有氧舞蹈社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td><p>火舞社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td><p>有品社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                    <td><p>財管系系學會</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>競技桌遊</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td><p>棒球社</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td><p>街舞社</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td><p>資訊志工社</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                    <td><p>企管系系學會</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><p>覺茶樂活社</p>
+                    <button type="button" class="btn btn-light w-100 d-block">查看</button></td>
+                    <td><p>體適能促進社</p>
+                    <button type="button" class="btn btn-light w-100 d-block">查看</button></td>
+                    <td><p>花式調酒</p>
+                    <button type="button" class="btn btn-light w-100 d-block">查看</button></td>
+                    <td><p>陽光志工隊</p>
+                    <button type="button" class="btn btn-light w-100 d-block">查看</button></td>
+                    <td></td>
+                    <td><p>運輸科技與物流管理學系</p>
+                    <button type="button" class="btn btn-light w-100 d-block">查看</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><p>廚藝精進社</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td><p>排球社</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td><p>競技啦啦社</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td><p>國際志工團</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                    <td><p>國際企業管理學系系學會</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>金采工坊</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td><p>網球社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td><p>創意彩球社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td><p>心巢小天使社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                    <td><p>建築暨都市計劃學系系學會</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><p>咖啡研習社</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td><p>中華水上運動社</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td><p>數位音樂創作社</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td><p>景觀系系學會</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><p>中華大學軍事研究社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                    <td><p>嘻哈研究社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td><p>行政管理系系學會</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><p>軟體與平台開發社</p>
+                    <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><p>休閒遊憩規劃與管理學系</p>
+                    <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><p>職能培訓社</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button></td>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><p>生物資訊系學會</p>
+                    <button type="button" class="btn btn-light w-100 d-block">查看</button></td>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><p>天文社</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button></td>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><p>科技管理學系系學會</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button></td>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><p>餐旅系系學會</p>
+                    <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><p>電子工程學系</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><p>應用日語系學會</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><p>觀光與會議展覽學系</p>
+                    <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><p>工業產品設計系系學會</p>
+                    <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><p>中華大學管理學院系學會聯合會</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><p>中華海青學會</p>
+                        <button type="button" class="btn btn-light w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><p>中華大學餐旅系進修部系學會</p>
+                        <button type="button" class="btn btn-outline-primary  w-100 d-block">查看</button>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+            
+            <tfoot>
+                <tr>
+                    <td >備註</td>
+                    <td colspan="6">敬請期待</td>
+                      
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>

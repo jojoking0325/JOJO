@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            background-image: linear-gradient(90deg, #A6FFCC	, #87CEFA	);
+            /* background-color: #000; */
+        }
+
+        .table {
+            border-radius: 10px 0 0 0;
+            width: 1400px;
+            margin: auto;
+        }
+
+        .table table {
+
+            width: 100%;
+            border: 3px double #666;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .table thead {
+
+            background-image: linear-gradient(0deg, #FF0000, #FF8000);
+            /* color: #FFDC35; */
+            color: #fff;
+        }
+
+        .table thead th:first-child {
+            border-radius: 7px 0 0 0;
+        }
+
+        .table thead th:last-child {
+            border-radius: 0 7px 0 0;
+        }
+
+        .table tbody tr:nth-child(odd) {
+            /* color: #fff; */
+            /* background-color: #84C1FF; */
+        }
+
+        .table tbody td:hover {
+            /* background-image: linear-gradient(360deg, #0f0, #FFFFCE); */
+            /* color: #fff; */
+        }
+
+        .table tbody a {
+            color: #000;
+        }
+
+        .table tfoot td:first-child {
+            border-radius: 0 0 0 7px;
+        }
+
+        .table tfoot td:last-child {
+            border-radius: 0 0 7px 0;
+        }
+
+        .table th {
+
+            border: 1px solid #666;
+            padding: 6px 10px;
+        }
+
+        .table td {
+
+            border: 1px solid #666;
+            padding: 6px 10px;
+        }
+
+        .table caption {
+            caption-side: bottom;
+            text-align: right;
+            padding: 10px 0;
+            color: #000;
+        }
+
+        .table caption a {
+            color: #000;
+        }
+
+        .table p {
+
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .table button {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .table tp {
+            color: #000;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .table h1 {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .table .tp p {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="banner">
+
+    </div> -->
+    <div class="table">
+        <table>
+            <div class="tp">
+                <h1>表單下載</h1><br>
+                <!-- <p>※ 器材借用步驟
+                於器材借用清單中選定須借用之器材
+                填寫器材借用單
+                繳至學生會 (活動中心二樓，G202教室)</p> -->
+                
+            </div>
+            <caption>
+                <!-- 社團介紹 -->
+            </caption>
+            <thead>
+                <!-- <h1>各社團介紹</h1> -->
+                <tr>
+                    <th scope="col">
+                        <p>社團活動</p>
+                    </th>
+                    <th scope="col">
+                        <p>帶動中小學</p>
+                    </th>
+                    <th scope="col">
+                        <p>志工服務</p>
+                    </th>
+                    <th scope="col">
+                        <p>陽光青年</p>
+                    </th>
+                    <th scope="col">
+                        <p>器材借用</p>
+                    </th>
+                    <!-- <th scope="col">
+                        <p>其他</p>
+                    </th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>【成立新社團】<br>
+                        社團成立申請表
+                    <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="012.doc" class="">下載</a></button></td>
+                    <td>
+                        【帶動中小學】<br>
+                        帶動中小 - 計劃書格式
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="028.doc" class="">下載</a></button></td>
+                    </td>
+                    <td>
+                        志工服務出席簽到表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="012.doc" class="">下載</a></button></td>
+                    <td>陽光青年成績登入申請表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="008.doc" class="">下載</a></button></td>
+                    <td>
+                       中華大學學生自治會器材清單
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="16thm.pdf" class="">下載</a></button></td>
+                    </td>
+                    
+                   
+                   
+
+                </tr>
+                <tr>
+                    <td>【社團活動】<br>
+                    學生社團活動申請暨核銷流程
+                    <a href="045.doc" class=""><button type="button" class="btn btn-outline-primary w-100 d-block">下載</button></a>
+                    社團活動申請表
+                    <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="015.doc" class="">下載</a></button>
+                    社團活動經費預算表
+                    <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="017.doc" class="">下載</a></button>
+                    新成立社團文具補助預算申請表
+                    <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="016.doc" class="">下載</a></button>
+                    社團活動經費收支結算表
+                    <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="041.doc" class="">下載</a></button>
+                    會議記錄表
+                    <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="044.doc" class="">下載</a></button>
+                    學生會補助專用支出憑證黏存單
+                    <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="046.doc" class="">下載</a></button>
+                    社團內部用支出憑證黏存單
+                    <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="040.doc" class="">下載</a></button>
+                    </td>
+                    
+                   
+                    <td>帶動中小 - 合作服務協定
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="024.doc" class="">下載</a></button>
+                        帶動中小 - 學生家長同意書
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="033.doc" class="">下載</a></button>
+                        帶動中小 - 戶外活動登記表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="022.doc" class="">下載</a></button>
+                        帶動中小 - 保險資單
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="027.doc" class="">下載</a></button>
+                        帶動中小 - 報告書格式
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="030.doc" class="">下載</a></button>
+                        
+                    </td>
+                    <td>志工服務反思回饋表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="005.doc" class="">下載</a></button></td>
+                    </td>
+                    <td>陽光青年成績更正申請單<button type="button" class="btn btn-outline-primary w-100 d-block"><a href="010.doc" class="">下載</a></button></td>
+                    <td>
+                       中華大學學生自治會器材借用規則：
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13thmb.doc">下載</a></button>
+                        </td>
+                        
+                    
+                </tr>
+                <tr>
+                    <td>【社團交接】<br>
+                        社團成立申請表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="012.doc">下載</a></button>
+                        社團基本資料表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="042.doc">下載</a></button>
+                        社團交接清冊報告範本
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="014.doc">下載</a></button>
+                        社團幹部及社員名冊
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="013.xls">下載</a></button>
+                        社團指導老師聘任申請表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="001.doc">下載</a></button>
+                        社團學年度活動預算表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="043.doc">下載</a></button>
+
+                    </td>
+                    <td>
+                        帶動中小 - 會議記錄表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="032.doc" class="">下載</a></button>
+                        帶動中小 - 反思單
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="023.doc" class="">下載</a></button>
+                        帶動中小 - 回饋表-服務對象
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="025.doc" class="">下載</a></button>
+                        帶動中小 - 回饋表-社員
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="026.doc">下載</a></button>
+                        帶動中小 - 禮品簽收單
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="034.doc" class="">下載</a></button>
+                        帶動中小 - 單據張數
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="029.doc" class="">下載</a></button>
+                    </td>
+                    <td>志工服務活動成績表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="006.doc">下載</a></button>
+                    </td>
+                   
+                    <td></td>
+                    <td>
+                        中華大學學生自治會器材管理辦法：
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="Equipment_Management.doc">下載</a></button></td>
+                        
+                                       
+                </tr>
+                <tr>
+                    <td>【社團技術指導老師】<br>
+                        社團技術指導老師教學進度表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="002.doc">下載</a></button>
+                        社團技術指導老師授課報告書
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="003.doc">下載</a></button>
+
+                
+                    </td>
+                    <td></td>
+                    
+                    <td>志工服務活動保險名單
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="007.doc">下載</a></button></td>
+                    <td></td>
+                
+                    <td></td>
+                   
+                </tr>
+                <tr>
+                    <td>【社團設備】<br>
+                        社團設備需求申請表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="018.doc">下載</a></button>
+                       
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                     </td>
+                
+                
+                </tr>
+                <tr>
+                    <td>企劃書：<br>
+                        企畫書撰寫與繳交流程
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-1.pdf">下載</a></button>
+                        企劃書審核標準
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-2.pdf">下載</a></button>
+                        企劃書-表格
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-3.doc">下載</a></button>
+                        社團活動申請表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-4.doc">下載</a></button>
+                        經費預算表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="017.doc">下載</a></button>
+                        器材借用單
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="14thma.doc">下載</a></button>
+                
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                       </td>
+                
+                   
+                
+                </tr>
+                <tr>
+                    <td>回報書：<br>
+                        回報書撰寫與繳交流程
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-6.pdf">下載</a></button>
+                        回報書審核標準
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-7.pdf">下載</a></button>
+                        回報書-表格
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-8.doc">下載</a></button>
+                        社團活動經費收支結算表
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="041.doc">下載</a></button>
+                        學生會輔助專用支出憑證黏存單
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="046.doc">下載</a></button>
+                       
+                
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                    </td>
+                
+                
+                </tr>
+                <tr>
+                    <td>範本：<br>
+                        <!-- <p></p> -->
+                        企劃書-範本
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-9.pdf">下載</a></button>
+                        回報書-範本
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-10.pdf">下載</a></button>
+                        社團評鑑 參考範本 (管樂社提供)
+                        <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-11.doc">下載</a></button>
+                
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                    </td>
+                
+                 
+                
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td>備註<br>
+                    <p>※ 需承辦活動可先下載企畫書範本改寫，
+                    <br>再依需求下載分離表單加入即可。</p><br>
+                    單據注意事項
+                <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-12.doc">下載</a></button>
+                    活動企劃與執行
+                    <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-13.doc">下載</a></button>
+                    社團評鑑資料運用
+                    <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="13tha-14.doc">下載</a></button>
+                    系會及社團相關規定
+                    <button type="button" class="btn btn-outline-primary w-100 d-block"><a href="College_Rule.doc">下載</a></button>
+                    <p>※ 特別注意
+                    活動企劃書請於活動前三周完成繳交，<br>
+                    回報書請於活動結束後三周內完成繳交，<br>
+                    如未在期限內完成繳交，將不予以補助，<br>
+                    社團評鑑也將不予以加分<br>
+                    ，請同學特別注意。
+                    民國100年5月起，<br>
+                    社團表格已加ISO認證編碼，填寫時請留意頁面底端。</p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                   <td></td>
+                    
+                    <td>
+                        <p>
+                        ※ 
+                        器材借用步驟<br>
+                        於器材借用清單中選定須借用之器材<br>
+                        填寫器材借用單<br>
+                        繳至學生會 (活動中心二樓，G202教室)</p></td>
+                        
+                    <!-- <td colspan="6">敬請期待</td> -->
+
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+</html>

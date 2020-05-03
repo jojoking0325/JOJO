@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+</head>
+<body>
+        <div class="container">
+            <canvas id="lineChart"></canvas>
+        </div>
+        <script>
+            var ctx = document.getElementById("lineChart");
+            var chart = new Chart(ctx,
+            {
+                type:"line",data:
+                {
+                    labels: ['1 月', '2 月', '3 月', '4 月', '5 月','6 月', '7 月'],
+                    datasets:[{
+                    label:"台北",data:[0,10,51,5,50,5,59],
+                    fill:false,
+                    backgroundColor:'rgba(205,155,0,0,10)',
+                    borderColor:'rgb(255,165,0)',
+                    pointStyle:"circle",
+                    pointBackgroundColor:'rgb(0,255,22)',
+                    pointRadius:5,pointHoverRadius:10,
+                }]},
+            options:
+            {
+                responsive:true,
+                title:
+                {
+                    display:true,
+                    fontSize:26,
+                    text:'1-6月'
+                },
+                tooltips: 
+                {
+                    mode: 'point',
+                    intersect: true,
+                },
+                legend: 
+                {
+                    position: 'bottom',
+                    labels: 
+                    {
+                        fontColor: 'black',
+                    }
+                }
+            }
+            
+            });
+        </script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+
+
+
+
+</body>

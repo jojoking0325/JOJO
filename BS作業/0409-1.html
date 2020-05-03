@@ -1,0 +1,317 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Sort Table</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <style>
+    table * {
+      border: 1px black solid;
+      text-align: center;
+    }
+
+    table i {
+      margin-left: 10px;
+      border: none;
+    }
+
+    table th.youCanSort:hover {
+      cursor: pointer;
+      background-color: darkgray;
+      color:darkslateblue;
+    }
+    .img{
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <table class="table table-primary">
+      <thead>
+        <tr class = "tr tr-warning">
+            
+            <th class="youCanSort" onclick="Sort(this)">sku<i class="fas fa-sort"></i></th>
+            <th class="youCanSort" onclick="Sort(this)">price<i class="fas fa-sort"></i></th>
+            <th class="youCanSort" onclick="Sort(this)">storage<i class="fas fa-sort"></i></th>
+            <th class="youCanSort" onclick="Sort(this)">description<i class="fas fa-sort"></i></th>
+            <th class="youCanSort" onclick="Sort(this)">picture<i class="fas fa-sort"></i></th>
+
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<button onclick="myFunction()">Try it</button>
+  <!-- <img src="https://picsum.photos/300/200/?random=1" class="w-100" class="d-block"> -->
+  <!-- <img src="apple/applelogo2.jpg" class="w-100" class="d-block"> -->
+  <!-- <img src="apple/ipad-gold.png" class="w-100" class="d-block"> -->
+  <script>
+    var Products = 
+    [
+            {
+                'sku': "MW762",
+                "price": 10900,
+                "storage": "32GB",
+                "description": "10.2 吋 iPad Wi-Fi 機型 32GB - 金色",
+                // "picture": "apple/ipad-gold.png"
+            },
+            {
+                "sku": "MW792",
+                "price": 13900,
+                "storage": "128GB",
+                "description": "10.2 吋 iPad Wi-Fi 機型 128GB - 金色",
+                // "picture": "ipad_gold.png"
+            },
+            {
+                "sku": "MW742",
+                "price": 10900,
+                "storage": "32GB",
+                "description": "10.2 吋 iPad Wi-Fi 機型 32GB - 太空灰色",
+                // "picture": "ipad_space.png"
+            },
+            {
+                "sku": "MW772",
+                "price": 13900,
+                "storage": "128GB",
+                "description": "10.2 吋 iPad Wi-Fi 機型 128GB - 太空灰色",
+                // "picture": "ipad_space.png"
+            },
+            {
+                "sku": "MW752",
+                "price": 10900,
+                "storage": "32GB",
+                "description": "10.2 吋 iPad Wi-Fi 機型 32GB - 銀色",
+                // "picture": "ipad_silver.png"
+            },
+            {
+                "sku": "MW782",
+                "price": 13900,
+                "storage": "128GB",
+                "description": "10.2 吋 iPad Wi-Fi 機型 128GB - 銀色",
+                // "picture": "ipad_silver.png"
+            },
+            {
+                "sku": "MW6D2",
+                "price": 15400,
+                "storage": "32GB",
+                "description": "10.2 吋 iPad Wi-Fi + 行動網路機型 32GB - 金色",
+                // "picture": "ipad_gold.png"
+            },
+            {
+                "sku": "MW6G2",
+                "price": 18400,
+                "storage": "128GB",
+                "description": "10.2 吋 iPad Wi-Fi + 行動網路機型 128GB - 金色",
+                // "picture": "ipad_gold.png"
+            },
+            {
+                "sku": "MW6A2",
+                "price": 15400,
+                "storage": "32GB",
+                "description": "10.2 吋 iPad Wi-Fi + 行動網路機型 32GB - 太空灰色",
+                // "picture": "ipad_space.png"
+            },
+            {
+                "sku": "MW6E2",
+                "price": 18400,
+                "storage": "128GB",
+                "description": "10.2 吋 iPad Wi-Fi + 行動網路機型 128GB - 太空灰色",
+                // "picture": "ipad_space.png"
+            },
+            {
+                "sku": "MW6C2",
+                "price": 15400,
+                "storage": "32GB",
+                "description": "10.2 吋 iPad Wi-Fi + 行動網路機型 32GB - 銀色",
+                // "picture": "ipad_silver.png"
+            },
+            {
+                "sku": "MW6F2",
+                "price": 18400,
+                "storage": "128GB",
+                "description": "10.2 吋 iPad Wi-Fi + 行動網路機型 128GB - 銀色",
+                // "picture": "ipad_silver.png"
+            }
+        ];
+       
+       
+    var tBody = document.getElementsByTagName('tbody')[0];
+  //  function myFunction() 
+  //  {
+  //     var x = document.createElement("IMG");
+      
+  //     x.setAttribute("src", "https://picsum.photos/500/500/?random=1");
+ 
+  //     document.body.appendChild(x);
+    
+  //   }
+
+    for (let item of Products) 
+    {
+      let tr = document.createElement('tr');
+       let img = document.createElement('IMG');
+     
+      for (let prop in item) 
+      {
+        let td = document.createElement('td');
+       
+        td.innerText = item[prop];
+        img.setAttribute("src", "apple/ipad-gold.png");
+        img.setAttribute("width", "200");
+        img.setAttribute("height", "200");
+         
+        tr.appendChild(td);     
+       
+      }
+      tr.appendChild(img);
+      // tr.appendChild(IMG);  
+      tBody.appendChild(tr);
+    }
+    var container = document.getElementById('container');
+
+     
+    var isDesc = false;
+
+    function Sort(el) 
+    {
+      //console.log(el)
+      //console.log(isDesc);
+      //console.log(typeof(el));
+
+      //reset icon
+      let thGroup = document.getElementsByClassName('youCanSort');
+      for(let th of thGroup)
+      {
+        th.firstElementChild.classList.remove('fa-sort-down');
+        th.firstElementChild.classList.remove('fa-sort-up');
+        th.firstElementChild.classList.remove('fa-sort');
+        th.firstElementChild.classList.add('fa-sort');
+      }
+      
+      //抓到下面的icon
+      let nowIcon = el.firstElementChild;
+      //console.log(nowIcon.classList);
+
+      //用prop排序
+      let sortResult = Products.sort(function (a, b) 
+      {
+        if (!isDesc) 
+        {
+          if(typeof(a[el.innerText]) == 'string')
+          {
+            if(a[el.innerText] >= b[el.innerText])
+            {
+              return 1;
+            }else
+            {
+              return -1;
+            }
+          }
+          return a[el.innerText] - b[el.innerText];
+        } else
+        {
+          if (typeof (el.innerText) == 'string') {
+            if (a[el.innerText] <= b[el.innerText]) {
+              return 1;
+            } else {
+              return -1;
+            }
+          }
+          return b[el.innerText] - a[el.innerText];
+        }
+      });
+
+      Products = sortResult;
+
+      //清空元素
+      tBody.innerHTML = '';
+
+      //長新的
+       
+      for (let item of sortResult) 
+      {
+        let tr = document.createElement('tr');
+        let imc = document.createElement('IMG');
+      
+         
+        //   let pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+        // let pokemonImg = `<img src='${pathFile}' />`;
+        // let pokemons = '';
+        // for (let i = 1; i < 890; i++) {
+        //   fileName = i.toString().padStart(3, '0');
+        //   pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+
+        //   //建立<img src=''>元素
+        //   let img = document.createElement('img');
+        //   img.setAttribute('src', pathFile);
+
+        //   //加入DOM元素
+        //   container.appendChild(img);
+
+      
+
+
+        for (let prop in item) 
+        {
+          let td = document.createElement('td');
+         
+          // img.innerText = item[prop];
+          
+          imc.setAttribute("src", "apple/ipad-gold.png");
+          imc.setAttribute("width","200");
+          imc.setAttribute("height","200");
+          td.innerText = item[prop];
+          tr.appendChild(td);
+         
+          tr.appendChild(imc);
+        }
+         
+        tBody.appendChild(tr);
+      }
+
+      //let test = document.getElementById('t').classList.remove
+
+      if(isDesc){
+        isDesc = false;
+        nowIcon.classList.remove('fa-sort');
+        nowIcon.classList.remove('fa-sort-down');
+        nowIcon.classList.add('fa-sort-up');
+      }else
+      {
+        isDesc = true;
+        nowIcon.classList.remove('fa-sort');
+        nowIcon.classList.remove('fa-sort-up');
+        nowIcon.classList.add('fa-sort-down');
+      }
+    }
+  </script>
+</body>
+
+</html>

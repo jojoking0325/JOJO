@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNGA新世代造車工藝</title>
+    <style>
+        * 
+        {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .main
+        {
+            width: 960px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 25% 0;
+        }
+
+        .pic_class 
+        {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            margin: 300px 0 700px 0;
+            box-sizing: content-box;
+        }
+
+        .pic_class .img_pic_1 
+        {
+            position: absolute;
+            top: 0px;
+            left: 100px;
+        }
+
+        .pic_class .background
+        {
+            width: 420px;
+            height: 250px;
+
+            position: absolute;
+            top: -100px;
+            left: 450px;
+        
+            background-color: #eee;
+            opacity: .5;
+        }
+
+        .pic_class .img_pic
+        {
+            position: absolute;
+            top: 200px;
+            left: 750px;
+        }
+
+        .pic_class .img_pic_2 
+        {
+            position: absolute;
+            top: -135px;
+            left: -100px;
+            margin: auto;
+        }
+
+        .pic_class .img_pic_3 
+        {
+            position: absolute;
+            top: 400px;
+            left: -80px;
+        }
+        .pic_class .background_2 
+        {
+            width: 550px;
+            height: 450px;
+            position: absolute;
+            top: -80px;
+            left: 200px;
+            background-color: #eee;
+            opacity: .5;
+        }
+
+        .pic_class .img_pic_4
+        {
+            position: absolute;
+            top: 215px;
+            left: -70px;
+        }
+
+        .pic_class .img_1
+        {
+            position: absolute;
+            top: 0px;
+            left: -50px;
+        }
+
+
+        .pic_class .img_2
+        {
+            position: absolute;
+            top: -135px;
+            left: 500px;
+          
+        }
+
+        .pic_class .img_3
+        {
+            position: absolute;
+            top: 400px;
+            left: 180px;
+        }
+         .header nav p:hover::after 
+        {
+            content: '';
+            border-bottom: 3px solid red;
+            display: block;
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            bottom: 0px;
+        }
+        
+        .header
+        {
+            display: flex;
+            padding: 0 20px;
+            background-color: #000;
+        }
+
+        .menu
+        {
+            text-align: center;
+            width: 100%;
+             top: 50px;
+        }
+
+        .header nav p 
+        {
+            display: inline-block;
+            text-decoration: none;
+            line-height: 50px;
+            color: white;
+            font-family:微軟正黑體,'Times New Roman', Times, serif;
+            font-size: 16px;
+            padding: 10px 60px;
+            margin: 0 5px;
+            position: relative;
+        }
+
+        .header nav p:hover:after
+        {
+            content: '';
+            /* border-bottom: 1px solid rgba(red,40, blue); */
+            display: block;
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            bottom: 0px;
+            color: black;
+        }
+
+        .title
+        {
+            display: flex;
+            justify-content: center;
+        }
+
+        .title h2 
+        {
+            font-size: 35px;
+            margin: 90px 0;
+            position: relative;
+        }
+
+        .title h2::after 
+        {
+            content: '';
+            border-bottom: 4px solid #000;
+            display: block;
+            position: absolute;
+            width: 40px;
+            left: 50px;
+            bottom: -20px;
+        }
+
+        .buttom 
+        {
+            display: flex;
+            position: relative;
+        }
+
+        .buttom .menulink p
+        {
+            display: inline-block;
+            text-decoration: none;
+            border: 1px dashed #000;
+            color: black;
+            border-bottom: 2px solid rgb(178,34, 34);
+            font-size: 16px;
+            font-family:微軟正黑體,'Times New Roman', Times, serif;
+            left: 280px;
+            /* height:10px; */
+            padding: 6px 62px;
+            position: relative;
+            overflow: hidden;
+            /* color: white; */
+        }    
+
+        .menulink>p::before 
+        {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            opacity: 1;
+            background-color:rgb(178,34,34);
+            transition: .3s;
+
+        }
+
+        .menulink>p:hover:before 
+        {
+            opacity: 1;
+            height: 100%;
+            z-index: -2;
+            color: white;
+            
+        }
+
+  
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav class="menu">
+            <p>核心理念</p>
+            <p>五大優勢</p>
+            <p>46 THINGS</p>
+            <p>影片演示</p>
+            <p>搭載車款</p>           
+        </nav>
+    </div>
+    
+    <div class="title">
+        <h2><font face="微軟正黑體">五大優勢</font></h2>
+    </div>
+  
+    <div class="buttom">
+        <nav class="menulink">
+            <p>操控樂趣</p>
+            <p>安全守護</p>
+            <p>乘坐舒適</p>
+            <p>以人為本</p>
+            <p>引以為傲</p>
+        </nav>
+    </div>
+</body>
+<body>
+
+    <div class="main">
+        <div class="pic_class">       
+            <div class="background"></div>              
+                <div class="img_pic_1"><img src="pic/assets/asset 55.png " alt=""></div>
+                <div class="img_pic"><img src="pic/assets/asset 56.png" alt=""></div>
+                <div class="img_pic_2"><img src="pic/assets/asset 57.png" alt=""></div>
+                <div class="img_pic_3"><img src="pic/assets/asset 58.png" alt=""></div>
+        </div>
+        <div class="pic_class">
+            <div class="background_2"></div>
+            <div class="img_1"><img src="pic/assets/asset 59.png" alt=""></div>
+            <div class="img_pic_4"><img src="pic/assets/asset 56.png" alt=""></div>
+            <div class="img_2"><img src="pic/assets/asset 60.png" alt=""></div>
+            <div class="img_3"><img src="pic/assets/asset 61.png" alt=""></div>
+        </div>
+        <div class="pic_class">
+            <div class="background"></div>
+            <div class="img_pic_1"><img src="pic/assets/asset 62.png" alt=""></div>
+            <div class="img_pic"><img src="pic/assets/asset 56.png" alt=""></div>
+            <div class="img_pic_2"><img src="pic/assets/asset 63.png" alt=""></div>
+            <div class="img_pic_3"><img src="pic/assets/asset 64.png" alt=""></div>
+        </div>
+        <div class="pic_class">
+            <div class="background_2"></div>
+            <div class="img_1"><img src="pic/assets/asset 65.png" alt=""></div>
+            <div class="img_pic_4"><img src="pic/assets/asset 56.png" alt=""></div>
+            <div class="img_2"><img src="pic/assets/asset 66.png" alt=""></div>
+            <div class="img_3"><img src="pic/assets/asset 67.png" alt=""></div>
+        </div>
+        <div class="pic_class">
+            <div class="background"></div>
+            <div class="img_pic_1"><img src="pic/assets/asset 68.png" alt=""></div>
+            <div class="img_pic"><img src="pic/assets/asset 56.png" alt=""></div>
+            <div class="img_pic_2"><img src="pic/assets/asset 69.png" alt=""></div>
+            <div class="img_pic_3"><img src="pic/assets/asset 70.png" alt=""></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>人員介紹</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            /* display: flex; */
+            align-items: center;
+            background-image: linear-gradient(90deg, #fff, #66B3FF, #fff);
+        }
+
+        .wrap_name {
+            width: 1200px;
+            display: flex;
+            margin: auto;
+        }
+
+        .item_name {
+            width: 368px;
+            margin: 15px;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            transform: translateY(0px);
+            transition: .5s;
+        }
+
+        .item_name img {
+
+            width: 100%;
+            height: 490.89px;
+            vertical-align: middle;
+        }
+
+        .item_name h2 {
+            border-bottom: 1px solid #888;
+            padding-bottom: .3em;
+            margin-bottom: .4em;
+            font-weight: 900;
+            transition: .25s;
+        }
+
+        .item_name p {
+            line-height: 1.5;
+            font-weight: 300;
+            transition: .25s;
+        }
+
+        .item_name .txt {
+            padding: 20px;
+            position: relative;
+        }
+
+        .item_name .txt:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 0;
+            top: 0;
+            border-top: 60px solid transparent;
+            border-left: 184px solid #fff;
+            border-right: 184px solid #fff;
+
+            transform: translateY(-100%);
+        }
+
+        .item_name:hover {
+            transform: translateY(-50px);
+        }
+
+        .item_name:hover .txt {
+            background-image: linear-gradient(0deg, #fff, #9393FF);
+        }
+
+        .item_name:hover .txt:before {
+            border-left: 184px solid #9393FF;
+            border-right: 184px solid #9393FF;
+        }
+
+        .item_name:hover h2 {
+            color: #0000C6;
+            border-bottom-color: #fff;
+        }
+
+        .item_name :hover p {
+            color: #0000C6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap_name">
+        <div class="item_name">
+            <img src="./img/CHUSA/1.jpg">
+            <div class="txt">
+                <h2>賴若芊</h2>
+                <p>
+                    職位:會長<br>
+                    系級:會四甲
+                </p>
+            </div>
+        </div>
+        <div class="item_name">
+            <img src="./img/CHUSA/2.jpg">
+            <div class="txt">
+                <h2>吳依凡</h2>
+                <p>
+                    職位:副會長<br>
+                    系級:會二甲
+                </p>
+            </div>
+        </div>
+        <div class="item_name">
+            <img src="./img/CHUSA/3.jpg">
+            <div class="txt">
+                <h2>吳宇涵</h2>
+                <p>
+                    職位:執行秘書<br>
+                    系級:會四甲
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap_name">
+        <div class="item_name">
+            <img src="./img/CHUSA/4.jpg">
+            <div class="txt">
+                <h2>詹君潔</h2>
+                <p>
+                    職位:財務長<br>
+                    系級:會二甲
+                </p>
+            </div>
+        </div>
+        <div class="item_name">
+            <img src="./img/CHUSA/5.jpg">
+            <div class="txt">
+                <h2>林宣諭</h2>
+                <p>
+                    職位:社團長<br>
+                    系級:餐二丙
+                </p>
+            </div>
+        </div>
+        <div class="item_name">
+            <img src="./img/CHUSA/6.jpg">
+            <div class="txt">
+                <h2>活動長</h2>
+                <p>
+                    職位:曾柏勳<br>
+                    系級:休二甲
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap_name">
+        <div class="item_name">
+            <img src="./img/CHUSA/7.jpg">
+            <div class="txt">
+                <h2>賴怡芳</h2>
+                <p>
+                    職位:美宣長<br>
+                    系級:餐二丙
+                </p>
+            </div>
+        </div>
+        <div class="item_name">
+            <img src="./img/CHUSA/8.jpg">
+            <div class="txt">
+                <h2>曾豪</h2>
+                <p>
+                    職位:公關長<br>
+                    系級:電機四乙
+                </p>
+            </div>
+        </div>
+        <div class="item_name">
+            <img src="./img/CHUSA/9.jpg">
+            <div class="txt">
+                <h2>章婷瑗</h2>
+                <p>
+                    職位:活動長<br>
+                    系級:電機二甲
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap_name">
+        <div class="item_name">
+            <img src="./img/CHUSA/10.jpg">
+            <div class="txt">
+                <h2>陳佩汶</h2>
+                <p>
+                    職位:學權長<br>
+                    系級:電機一乙
+                </p>
+            </div>
+        </div>
+        <div class="item_name">
+            <img src="./img/CHUSA/11.jpg">
+            <div class="txt">
+                <h2>林忠右</h2>
+                <p>
+                    職位:器材長<br>
+                    系級:休四甲
+                </p>
+            </div>
+        </div>
+        <div class="item_name">
+            <img src="./img/CHUSA/12.jpg">
+            <div class="txt">
+                <h2>黃璉欣</h2>
+                <p>
+                    職位:器材長<br>
+                    系級:餐四甲
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

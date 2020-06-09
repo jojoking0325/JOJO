@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            background:linear-gradient(20deg,#3d5493,#1aa2a0) fixed center/100% 100%;
+            padding: 100px 0;
+        }
+        .wrap2s{
+            width: 1200px;
+            margin: auto;
+        }
+        .item2s{
+            display: flex;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+        .item2s .pic{
+            width:55%;
+            flex-shrink:0;
+        }
+        .item2s .pic img{
+            width:  100%;
+            vertical-align: middle;
+        }
+        .item2s .txt{
+            width: 55%;
+            /* background-color: #f00; */
+            flex-shrink: 0;
+            padding: 50px 30px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            line-height: 1.5;
+        }
+        .item2s h2{
+             border-bottom: 1px solid #000;
+            font-weight: 900;
+            line-height: 1.5;
+        }
+        .item2s p{
+            font-weight: 300;
+        }
+        .item2s > :first-child{
+            margin-right: -10%;
+        }
+        .item2s:nth-child(1) .txt{
+            color: #fff;
+            background-color: rgba(240,174,193,.8);
+        }
+        
+    </style>
+    <title>介紹</title>
+</head>
+<body>
+    <div class="wrap2s">
+        <div class="item2s">
+            <div class="pic">
+                <img src="https://picsum.photos/600/350/?random=1" class="w-100" class="d-block">
+            </div>
+            <div class="txt">
+                <h2>學生會簡介</h2>
+                <p>中華大學 第18屆學生會簡介
+                第18屆學生會成員由會長賴若芊以及副會長吳依凡帶領，其幹部有執行秘書吳宇涵、公關長曾豪、財務長詹君潔、社團長林宣諭、學會長曾柏勳、美宣長賴怡芳、學權長陳佩汶、活動長章庭瑗以及器材長黃璉欣、林忠右，我們的核心是希望透過舉辦大小型活動，使校園生活更加精彩及豐富，以及設立學生反應系統，接收並聆聽學生們之權益問題，並協助問題改善，站在第一線為學生發聲。透過參與各項大小型會議，與上級老師、主任建立良好的溝通管道，並於會議中反應學生們之權益問題。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

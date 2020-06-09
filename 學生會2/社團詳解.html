@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資料</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            /* display: flex; */
+            align-items: center;
+        }
+        html,body{
+            height: 100%;
+        }
+        .table{
+            /* display: flex; */
+
+            width: 800px;
+            margin: auto;
+        }
+        .table table{
+            width: 100%;
+            border:  3px double #666;
+            border-radius: 10px;
+        }
+        .table thead{
+            background-color: #333;
+            color: #fff;
+        }
+        .table tbody tr:nth-child(odd){
+            background-color: aqua;
+        } 
+        .table thead th:first-child{
+            border-radius: 7px 0 0 0;
+        }
+        .table thead th:last-child{
+            border-radius: 0 7px 0 0;
+        }
+        .table tfoot td:first-child{
+            border-radius: 0 0 0 7px;
+        } 
+        .table tfoot td:last-child{
+            border-radius: 0 0 7px 0;
+        }
+        .table th{
+            /* display: flex; */
+            border: 1px solid#666;
+            padding: 6px 10px;
+
+        }
+        .table td{
+            /* display: flex; */
+            /* flex-direction: column; */
+            border: 1px solid#666;
+            box-sizing: border-box;
+            padding: 6px 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2"scope="col">社團基本資料</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p>社團代碼</p></td>
+                    <td>A02</td>     
+                </tr>
+                <tr>
+                    <td><p>社團社長</p></td>
+                    <td>曾暐翔（B10614017，運管系三年甲班）</td>
+                </tr>
+                <tr>
+                    <td><p>社團中文名稱</p></td>
+                    <td>風華攝影社</td>
+                </tr>
+                <tr>
+                    <td><p>社團英文名稱</p></td>
+                    <td>CHU Photo Club</td>
+                </tr>
+                <tr>
+                    <td><p>社團成立目的</p></td>
+                    <td>喜歡攝影嗎？喜歡在鏡頭前展現自己嗎？ 不管你喜歡拍照還是被拍，不管你有的是手機或是相機；趕快來加入我們中華大學攝影社的大家庭吧！</td>
+                </tr>
+                <tr>
+                    <td><p>社團電子郵件</p></td>
+                    <td>chufenghuaphoto@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><p>社團辦公空間</p></td>
+                    <td>G205E(活動中心右側二樓走到底)</td>
+                </tr>
+                <tr>
+                    <td><p>社團辦公電話</p></td>
+                    <td>0905-194-138</td>
+                </tr>
+                <tr>
+                    <td><p>社團指導老師</p></td>
+                    <td>張靖</td>
+                </tr>
+                <tr>
+                    <td><p>指導老師電話</p></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><p>技術指導老師</p></td>
+                    <td>王君任</td>
+                </tr>
+                <tr>
+                    <td><p>技術指導電話</p></td>
+                    <td>0975-861-321</td>
+                </tr>
+                <tr>
+                    <td><p>社團自製網頁</p></td>
+                    <td>FB粉絲專頁-CHUPC 中華大學風華攝影社：https://reurl.cc/lLojGY</td>
+                </tr>
+                <tr>
+                    <td><p>社團活動時間</p></td>
+                    <td>每週一 19:00~21:00</td>
+                </tr>
+                <tr>
+                    <td><p>社團活動地點</p></td>
+                    <td>預排：M408-C (管院4樓)；實際請參閱FB粉絲專頁</td>
+                </tr>
+                <tr>
+                    <td><p>年度活動大事</p></td>
+                    <td>
+                        <p>3/9 (一)期初茶會
+                        3/16(一)進階閃燈
+                        3/23(一)證件照拍攝
+                        3/30(一)靜物拍攝
+                        4/6 (一)人像棚拍
+                        4/11(六)人像外拍
+                        4/27(一)夜拍與長曝
+                        5/4 (一)內灣螢火蟲拍攝
+                        5/11(一)基礎修圖(三)
+                        5/18(一)活動紀錄
+                        5/25(一)進階修圖
+                        6/1 (一)期末聚餐
+                        -以上課程活動時間地點皆為預排，如有異動請依臉書粉絲專頁公告為準-
+                        聯絡人 LINE ID:hanian0514</p></td>
+                </tr>
+                <tr>
+                    <td><p>社團類別歸屬</p></td>
+                    <td>學藝性社團</td>
+                </tr>
+                <tr>
+                    <td><p>是否已停社</p></td>
+                    <td>否</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+    </div>
+</body>
+</html>

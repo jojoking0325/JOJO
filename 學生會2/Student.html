@@ -22,7 +22,10 @@
             font-family: 'Noto Sans TC', sans-serif;
             font-size: 14px;
         }
-
+        body{
+            /* background:linear-gradient(20deg,#C4E1FF,#fff) fixed center/100% 100%; */
+            /* padding: 100px 0; */
+        }
         .main-header {
             background-color: #0f0;
             background: linear-gradient(180deg, #272727, #4A4AFF);
@@ -35,7 +38,7 @@
         .main-header .container {
             display: flex;
             align-items: center;
-            padding: 20px;
+            /* padding: 1px; */
             max-width: 1200px;
             margin: auto;
         }
@@ -112,6 +115,7 @@
             display: flex;
             align-items: center;
             background: linear-gradient(-30deg, #7bf, #fff);
+            /* background: linear-gradient(-30deg, #f00, #fff); */
         }
 
         .containers {
@@ -280,8 +284,58 @@
             margin-bottom: .4em;
             line-height: 1.7;
         }
+        /* 簡介 */
+        /* .wrap2s{
+            width: 1200px;
+            margin: auto;
+        } */
+        .item2s{
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .item2s .pic{
+            line-height: 5;
+            width:55%;
+            flex-shrink:0;
+        }
+        .item2s .pic img{
+            width:  100%;
+            vertical-align: middle;
+        }
+        .item2s .txt{
+            
+            width: 55%;
+            /* background-color: #f00; */
+            flex-shrink: 0;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            line-height: 1.5;
+        }
+        .item2s h2{
+             border-bottom: 1px solid #000;
+            font-weight: 900;
+            line-height: 1.5;
+        }
+        .item2s p{
+            margin-bottom: 0px;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .item2s > :first-child{
+            margin-right: -10%;
+        }
+        .item2s:nth-child(1) .txt{
+            color: #fff;
+            /* background-color: rgba(240,174,193,.8); */
+             background-color: rgba(102,179,255,.7);
+        }
+        
 
-        .wrap2s {
+        /* .wrap2s {
             width: 1200px;
             display: flex;
             margin: auto;
@@ -307,7 +361,7 @@
 
         .item2s p {
             line-height: 1.6;
-        }
+        } */
 
         .wrap4 {
             width: 960px;
@@ -463,7 +517,9 @@
 
         .main-footer {
             padding: 10px 0 0;
-            background: linear-gradient(0deg, #CECEFf, #C4E1FF);
+            /* background: linear-gradient(0deg, #CECEFf, #C4E1FF); */
+            background: linear-gradient(0deg, #ffffff, #000000);
+            /* background-color: #000000; */
         }
 
         .main-footer .container {
@@ -483,9 +539,11 @@
             text-align: center;
             margin: 10px 0 0;
             padding: 10px 0;
-            background-color: #C4E1FF;
+            /* background-color: #C4E1FF; */
+            background-color: #000000;
             color: #fff;
         }
+
 
         .footer-item h4 {
             font-size: 24px;
@@ -502,7 +560,7 @@
 
         .footer-item nav p {
             color: #fff;
-            font-size: 20px;
+            font-size: 14px;
         }
 
         .footer-item nav a {
@@ -510,7 +568,7 @@
             line-height: 1.4;
             text-decoration: none;
             padding: 5px 0;
-            font-size: 20px;
+            font-size: 16px;
         }
 
         .footer-subs {
@@ -528,7 +586,7 @@
         .footer-subs input[type="text"],
         .footer-subs input[type="submit"] {
             border: none;
-            border-radius: 20px;
+            border-radius: 18px;
             padding: 5px 10px;
         }
 
@@ -541,6 +599,8 @@
             color: #fff;
             background-color: #CECEFf;
         }
+
+        
     </style>
 </head>
 
@@ -563,17 +623,19 @@
             <a href="#" class="logo">
                 <!-- <img src="chu.jpg" alt="chu"> -->
                 <!-- CHU_logo.png -->
-                <img src="CHU_logo2.png" alt="chu">
+                <!-- <img src="CHU_logo2.png" alt="chu"> -->
+                <img src="./img/baner.png" alt="chu">
                 <a class="navbar-brand" href="" rel="homepage">學生會 CHUSA </a>
             </a>
             <nav class="main-nav">
-                <a href="#" class="">學生會介紹</a>
-                <a href="https://bsjojowork.azurewebsites.net/%E5%AD%B8%E7%94%9F%E6%9C%832/chusa.html" class="">社團介紹</a>
-                <a href="" class="">成果展</a>
+                <a href="#" class="title">學生會介紹</a>
+                <!-- <a href="https://bsjojowork.azurewebsites.net/%E5%AD%B8%E7%94%9F%E6%9C%832/chusa.html" class="">社團介紹</a> -->
+                <a href="https://saoinfo.chu.edu.tw/eaoffice_association_index.aspx" class="">社團介紹</a>
+                <!-- <a href="" class="">成果展</a> -->
                 <a href="#" class="">最新消息</a>
                 <a href="http://saoffice.adm.chu.edu.tw/files/13-1086-19883.php" class="">表單下載</a>
-                <a href="#" class="">承辦活動</a>
-                <a href="#" class="">人員介紹</a>
+                <!-- <a href="#" class="">承辦活動</a> -->
+                <a href="https://bsjojowork.azurewebsites.net/%E5%AD%B8%E7%94%9F%E6%9C%832/people.html" class="">人員介紹</a>
             </nav>
             <form class="header-search">
                 <input type="search" name="" id="">
@@ -595,20 +657,23 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./img/logo.jpg" width="1639" height="639" alt="">
-                <!-- <img src="https://picsum.photos/1200/500/?random=13" class="d-block w-100" alt="..."> -->
+                <img src="./img/new/1.jpg" width="1200" height="638" class="d-block w-100" alt="...">
+                <!-- <img src="./img/logo.jpg" width="1639" height="639" alt="">
+                <img src="https://picsum.photos/1200/500/?random=13" class="d-block w-100" alt="..."> -->
+            </div>
+            <!-- <div class="carousel-item">
+                <img src="./img/new/1.jpg" width="1200" height="638" class="d-block w-100" alt="...">
+            </div> -->
+            <div class="carousel-item">
+                <!-- <img src="./img/wowslider/2.jpg" width="1200" height="638" class="d-block w-100" alt="...">
+                 -->
+                <img src="./img/activity/activity_2.jpg" width="1200" height="638" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="./img/wowslider/1.jpg" width="1200" height="638" class="d-block w-100" alt="...">
+                <img src="./img/activity/activity_11.jpg" width="1200" height="638" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="./img/wowslider/2.jpg" width="1200" height="638" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="./img/wowslider/3.jpg" width="1200" height="638" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="./img/wowslider/4.jpg" width="1200" height="638" class="d-block w-100" alt="...">
+                <img src="./img/activity/activity_12.jpg" width="1200" height="638" class="d-block w-100" alt="...">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -628,22 +693,36 @@
             <li class="breadcrumb-item active" aria-current="page">Data</li>
         </ol>
     </nav> -->
-
+  
     <!-- <div class="container"> -->
 
     <!-- </div> -->
-
     <div class="wrap2s">
         <div class="item2s">
-            <img src="https://picsum.photos/300/300/?random=1">
+            <div class="pic">
+                <img src="./img/new/5.PNG" weight="600" height="400" class="w-100" class="d-block">
+            </div>
             <div class="txt">
-                <h2>資料1</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda neque doloribus alias? Placeat
-                    corporis ea atque officiis, reprehenderit accusamus minus facere consectetur assumenda, cum dicta
-                    dolorem ipsa ipsum eius odit?</p>
+                <h2>學生會簡介</h2>
+                <p>中華大學 第18屆學生會簡介<br>
+                    第18屆學生會成員由會長賴若芊以及副會長吳依凡帶領，其幹部有執行秘書吳宇涵、公關長曾豪、財務長詹君潔、社團長林宣諭、學會長曾柏勳、美宣長賴怡芳、學權長陳佩汶、活動長章庭瑗以及器材長黃璉欣、林忠右，我們的核心是希望透過舉辦大小型活動，使校園生活更加精彩及豐富，以及設立學生反應系統，接收並聆聽學生們之權益問題，並協助問題改善，站在第一線為學生發聲。透過參與各項大小型會議，與上級老師、主任建立良好的溝通管道，並於會議中反應學生們之權益問題。
+                </p>
             </div>
         </div>
+    </div>
+    <!-- <div class="wrap2s">
         <div class="item2s">
+            <img src="./img/new/3.jpg">
+            <div class="txt">
+                <h2>學生會簡介</h2>
+                <p><p>
+                    中華大學 第18屆學生會簡介
+                    第18屆學生會成員由會長賴若芊以及副會長吳依凡帶領，其幹部有執行秘書吳宇涵、公關長曾豪、財務長詹君潔、社團長林宣諭、學會長曾柏勳、美宣長賴怡芳、學權長陳佩汶、活動長章庭瑗以及器材長黃璉欣、林忠右，我們的核心是希望透過舉辦大小型活動，使校園生活更加精彩及豐富，以及設立學生反應系統，接收並聆聽學生們之權益問題，並協助問題改善，站在第一線為學生發聲。透過參與各項大小型會議，與上級老師、主任建立良好的溝通管道，並於會議中反應學生們之權益問題。
+                </p>
+            </div>
+        </div> -->
+
+        <!-- <div class="item2s">
             <img src="https://picsum.photos/300/300/?random=1">
             <div class="txt">
                 <h2>資料2</h2>
@@ -662,81 +741,84 @@
                     Placeatcorporis eaatque officiis, reprehenderit accusamus minus facere consectetur assumenda, cum
                     dicta dolorem ipsaipsum eiusodit?</p>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="wrapss">
         <div class="itemss">
-            <img src="https://picsum.photos/300/200/?random=1">
+            <img src="./img/activity/activity_15.jpg"  width="300px">
             <div class="txt">
-                <h3>CHU</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum explicabo quo quod cum hic
-                    doloribus commodi. Sunt nemo hic omnis? Error a assumenda nulla sunt est id adipisci corporis?</p>
+                <h3>與校長有約</h3>
+                <!-- <p>期末大會</p> -->
             </div>
         </div>
         <div class="itemss">
-            <img src="https://picsum.photos/300/200/?random=2">
+            <img src="./img/activity/activity_1.jpg" width="300px" height="200px">
             <div class="txt">
-                <h3>CHU</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum explicabo quo quod cum hic
+                <h3>學生會期末大會</h3>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum explicabo quo quod cum hic
                     doloribus commodi.
-                    Sunt nemo hic omnis? Error a assumenda nulla sunt est id adipisci corporis?</p>
+                    Sunt nemo hic omnis? Error a assumenda nulla sunt est id adipisci corporis?</p> -->
             </div>
         </div>
         <div class="itemss">
-            <img src="https://picsum.photos/300/200/?random=3">
+            <img src="./img/activity/activity_14.jpg" width="300px" height="200px">
             <div class="txt">
-                <h3>CHU</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum explicabo quo quod cum hic
+                <h3>社團博覽會</h3>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum explicabo quo quod cum hic
                     doloribus commodi.
-                    Sunt nemo hic omnis? Error a assumenda nulla sunt est id adipisci corporis?</p>
+                    Sunt nemo hic omnis? Error a assumenda nulla sunt est id adipisci corporis?</p> -->
             </div>
         </div>
         <div class="itemss">
-            <img src="https://picsum.photos/300/200/?random=4">
+            <img src="./img/activity/activity_13.jpg" width="300px" height="200px">
             <div class="txt">
-                <h3>CHU</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum explicabo quo quod cum hic
+                <h3>大合照</h3>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum explicabo quo quod cum hic
                     doloribus commodi.
-                    Sunt nemo hic omnis? Error a assumenda nulla sunt est id adipisci corporis?</p>
+                    Sunt nemo hic omnis? Error a assumenda nulla sunt est id adipisci corporis?</p> -->
             </div>
         </div>
         <div class="itemss">
-            <img src="https://picsum.photos/300/200/?random=5">
+            <img src="./img/activity/activity_12.jpg" width="300px" height="200px">
             <div class="txt">
-                <h3>CHU</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum explicabo quo quod cum hic
+                <h3>畢業典禮</h3>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illum explicabo quo quod cum hic
                     doloribus commodi.
-                    Sunt nemo hic omnis? Error a assumenda nulla sunt est id adipisci corporis?</p>
+                    Sunt nemo hic omnis? Error a assumenda nulla sunt est id adipisci corporis?</p> -->
             </div>
         </div>
 
         <!--  -->
         <div class="wrap4">
             <div class="item4">
-                <h3>活動介紹</h3>
-                <img src=activity_1.jpg>
-                <div class="txt">
+                <h3>最新消息</h3>
+                <div class="pic"><img src="./img/activity/activity_5.jpg"></div>
+                
+                <!-- <div class="txt">
 
                     <p><img src=activity_1.jpg></p>
-                </div>
+                </div> -->
             </div>
             <div class="item4">
-                <img src=activity_2.jpg>
-                <div class="txt">
+                <h3>.</h3>
+                <div class="pic"><img src="./img/activity/activity_8.jpg"></div>
+                
+                <!-- <div class="txt">
 
                     <p><img src=activity_2.jpg></p>
-                </div>
+                </div> -->
             </div>
             <div class="item4">
-                <img src=https://picsum.photos/200/300?random=3>
-                <div class="txt">
+                <h3>.</h3>
+                <img src="./img/activity/activity_10.jpg">
+                <!-- <div class="txt">
                     <h3></h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime unde corporis provident animi,
                         pariatur,
                         quisquam dolorum laborum placeat eaque ab ipsam architecto ex molestiae quia assumenda? Aut nam
                         soluta
                         quidem!</p>
-                </div>
+                </div> -->
             </div>
         </div>
         <!--  -->
@@ -760,7 +842,7 @@
 
 
         <!--  -->
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
                 <div class="col-12 col-md-3">
                     <div class="card">
@@ -821,7 +903,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="main-footer">
             <div class="container">
@@ -829,10 +911,13 @@
                 <div class="footer-item">
                     <h4>格言使命</h4>
                     <nav>
-                        <p>本會為了達到有效整合並妥善運用校內各項資源，<br>
-                            除了管理學生事務外，<br>
-                            更發揮其應有之功能及效益，
-                            特別分設：學生行政中心、學生議會。</p>
+                        <p>本會
+                           為了達到有效整合
+                           並妥善運用校內各項資源<br>
+                           除了管理學生事務外<br>
+                           更發揮其應有之功能及效益<br>
+                           特別分設：學生行政中心、學生議會。</p>
+                           
                     </nav>
 
                     <!-- <nav>
@@ -846,30 +931,35 @@
                 </div>
                 <div class="footer-item">
                     <h4>服務時間</h4>
+                   
                     <nav>
-                        <a href="#">
-                            <a href=""><i class="fa fa-angle-right" aria-hidden="true">1</i></a>
-                            <a href=""><i class="fa fa-angle-right" aria-hidden="true">2</i></a>
-                            <a href=""><i class="fa fa-angle-right" aria-hidden="true">3</i></a>
-                            <a href=""><i class="fa fa-angle-right" aria-hidden="true">4</i></a>
-                        </a>
+                        <p>星期 一、三 <br>
+                           13:00-17:00</p>
+                        
                     </nav>
                 </div>
                 <div class="footer-item">
                     <h4>聯絡方式</h4>
                     <nav>
-                        <a href="#">
+                        <p>
+                            <a href="https://www.facebook.com/chu.sa.com.tw/">
+                                <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>學生會CHUSA臉書</i></a><br>
+                            會長:賴若芊<br>
+                            副會長:吳依凡 <br>
+                            電話:03-537-4281 #2060
+                        </p>
+                        <!-- <a href="#">
                             <a href=""><i class="fa fa-angle-right" aria-hidden="true">1</i></a>
                             <a href=""><i class="fa fa-angle-right" aria-hidden="true">2</i></a>
                             <a href=""><i class="fa fa-angle-right" aria-hidden="true">3</i></a>
                             <a href=""><i class="fa fa-angle-right" aria-hidden="true">4</i></a>
-                        </a>
+                        </a> -->
                     </nav>
                 </div>
                 <div class="footer-item footer-subs">
                     <h4>地點</h4>
                     <nav>
-                        <p>300新竹市香山區五福路二段707號 活動中心</p>
+                        <p>300新竹市香山區五福路二段707號 活動中心:G202</p>
                     </nav>
                     <!-- <nav>
                                 <form>
@@ -884,14 +974,14 @@
                         <a href="#">
                             <a href="http://www1.chu.edu.tw/">
                                 <i class="fa fa-home fa-2x" aria-hidden="true"></i></i></i>中華大學首頁</i></a>
-                            <a href="https://www.facebook.com/chu.sa.com.tw/">
-                                <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>C H U S A 臉書</i></a>
+                            <!-- <a href="https://www.facebook.com/chu.sa.com.tw/">
+                                <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>C H U S A 臉書</i></a> -->
                             <a href="https://www.facebook.com/CHU1990/">
                                 <i class="fa fa-facebook-square fa-2x" aria-hidden="true">
                                 </i>中華大學臉書</i></a>
                             <a href="https://elearn.chu.edu.tw/">
                                 <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i></i></i>Ecampus</i></a>
-                            <a href="https://student2.chu.edu.tw/">
+                            <a href="http://www.chu.edu.tw/files/13-1000-36385.php#tabs-1">
                                 <i class="fa fa-home fa-2x" aria-hidden="true"></i></i></i>學生資訊系統</i></a>
                         </a>
 
